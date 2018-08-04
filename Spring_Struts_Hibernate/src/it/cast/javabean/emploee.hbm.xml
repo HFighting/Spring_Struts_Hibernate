@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--文档说明，设置映射文件  -->
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--该类所在的包名-->
+<hibernate-mapping package="it.cast.javabean">
+      <!--需要设置的映射类：设置该类对应的表  -->
+    <!--属性：name:类名  table:表名  -->
+    <class name="Emploee" table="t_emploee">
+    <!--id:主键，name:属性名称，column：字段名称  -->
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+
+        <property name="name" column="t_name"/>
+        <property name="dept" column="t_dept"/>
+        <property name="age" column="t_age"/> 
+    </class>
+</hibernate-mapping>
